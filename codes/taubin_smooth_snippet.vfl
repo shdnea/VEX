@@ -1,0 +1,12 @@
+int n = neighbourcount(0, @ptnum);
+
+float weight = 1.0 / n;
+
+vector avg = {0,0,0};
+
+foreach(int j; neighbours(0,@ptnum)){
+    avg += weight * ((point(0,'P',j)) - @P);
+}
+
+float lambda = chf("mag");
+@P += lambda * avg;

@@ -1,0 +1,21 @@
+//Find neighbouring points
+/*neighbourcount() returns the number of points thats are
+connected to the spesific points in this case we want to get
+the neighbors points of every points
+*/
+int n = neighbourcount(0, @ptnum);
+
+//calc the weight
+float weight = 1.0 / n;
+
+//calc avg vector
+vector avg = {0,0,0};
+
+foreach(int j; neighbours(0,@ptnum)){
+    avg += weight * ((point(0,'P',j)) - @P);
+}
+
+//The Taubin Equation was the same with Laplacian, but
+// We need to negate the lambda
+float lambda = chf("mag");
+@P += lambda * avg;
