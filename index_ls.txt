@@ -1,3 +1,2 @@
 1. Laplacian Geo smoothing
 2. Taubin Geo smoothing
---End--
