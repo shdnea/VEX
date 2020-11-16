@@ -1,0 +1,21 @@
+int count = chi("count");
+float bound = 10.0;
+float tau = 2 * 3.1415926535897932384; //3.1415926535897932384
+
+//polar to cartesian
+vector polar_to_cartesian(float theta;float radius){
+    return set(cos(theta) * radius,0,sin(theta)* radius);
+}
+
+float phi = (1 + sqrt(5)) / 2;
+float golden_angle = (2 - phi) * tau;
+float theta = 0;
+float radius = 3.0;
+vector pos;
+
+for(int i = 0; i < count; i++){
+    radius = bound * i / count;
+    theta += golden_angle; 
+    pos = polar_to_cartesian(theta, radius);
+    addpoint(0,pos);
+}
