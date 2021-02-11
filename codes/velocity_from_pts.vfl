@@ -1,0 +1,6 @@
+// Need points reference from second input i.e input 1
+vector dir = @P - point(1,"P",0);
+v@v = normalize(dir);
+
+f@distance = length(dir);
+v@v *= 100 * fit(@distance,0,18,1,.05);
