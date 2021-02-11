@@ -1,3 +1,4 @@
 1. Laplacian Geo smoothing
 2. Taubin Geo smoothing
 3. Phylotaxis
+4. Velocity from points reference , this is good something like rbd or particle simulation
